@@ -1,0 +1,68 @@
+<!--
+1. Set the background-color to red, when you mouse over a link.
+2. Set the background-color to red, when you mouse over elements with the class "master".
+3. Set the background-color to green, of any <p> element that are the first child of any element.
+4. Set the background-color to red, of any <input> element that are in focus.
+
+5.Set the background-color to red, of the first line of the paragraph class intro.
+6.Set the background-color to green, for the first letter of the class intro element.
+7.Insert the image "css.jpg" before, and after any gif image class, using the ::before and ::after pseudo-elements.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pseudo Classes</title>
+    </head>
+    <style>
+        a:hover, .master:hover {
+            background-color: red;
+        }
+        p:first-child {
+            background-color: green;
+        }
+        input:focus {
+            background-color: red;
+        }
+        p.intro::first-line {
+            background-color: red;
+        }
+        .intro::first-letter {
+            background-color: green;
+        }
+        .image::after, .image::before {
+            content: url('css.jpg');
+        }
+    </style>
+    <body>
+    <div class="exercise-1-4">
+        <h1 class="master">This is a header.</h1>
+        <p class="master">This is a paragraph.</p>
+        <p>This is a paragraph.</p>
+        <a href="https://evia.de">This is a link.</a>
+
+        <form>
+            Name:
+            <input type="text" name="fname">
+            Age:
+            <input type="text" name="age">
+        </form>
+    </div>
+
+    <div class="exercise-5-6">
+        <p class="intro">
+            In my younger and more vulnerable years
+            my father gave me some advice that I've
+            been turning over in my mind ever since.
+            'Whenever you feel like criticizing anyone,' he told me,
+            'just remember that all the people in this world
+            haven't had the advantages that you've had.'
+        </p>
+        <p class="image">This is a paragraph.</p>
+        <p class="image">This is a paragraph.</p>
+    </div>
+
+    </body>
+</html>
